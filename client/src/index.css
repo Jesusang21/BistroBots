@@ -1,0 +1,95 @@
+:root {
+    --sidebar-bg: #11282e;
+    --sidebar-hover: #1c3941;
+    --sidebar-active: #234852;
+    --primary-teal: #00798c;
+    --bg-main: #f8f6f0;
+    /* Tono crema cálido idéntico a la vista previa */
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --badge-active-bg: #c8e6c9;
+    --badge-active-color: #2e7d32;
+    --badge-warn-bg: #ffe0b2;
+    --badge-warn-color: #ef6c00;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: var(--bg-main);
+}
+
+.content-body {
+    padding: 32px;
+    flex: 1;
+    /* max-width: 1400px; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Tarjeta contenedora de la tabla */
+.table-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Transiciones en botones y filas */
+button {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+tr:hover {
+    background-color: #fcfcfd;
+}
+
+/* Modal mejorado */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    width: 480px;
+    max-width: 90%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
